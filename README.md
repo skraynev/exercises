@@ -12,3 +12,5 @@ the better solutions :)
 May be I will come back and fix them later.
 
 P.s. Names and comapains will not be presented here.
+
+NOTE: all examples were tested on python3.5
