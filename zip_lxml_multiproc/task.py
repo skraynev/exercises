@@ -117,9 +117,9 @@ class Task(object):
                     var1 = root.findall('var')[0]
                     var2 = root.findall('var')[1]
                     if var1.get('name') == 'id':
-                       _id, level = var1.get('value'), var2.get('value')
+                        _id, level = var1.get('value'), var2.get('value')
                     else:
-                       _id, level = var2.get('value'), var1.get('value')
+                        _id, level = var2.get('value'), var1.get('value')
                     first_data.append((_id, level))
 
                     for i in root.find('objects').findall('object'):

@@ -8,9 +8,9 @@ class FindTree():
         for word in self.words:
             val = self.tree
             for s in word:
-               if s not in val:
-                   val[s] = {}
-               val = val[s]
+                if s not in val:
+                    val[s] = {}
+                val = val[s]
 
     def _find(self, sub_tree):
         r = []
@@ -37,8 +37,8 @@ class FindTree():
     # with recursion and tree
     def find_in_tree(self, prefix, with_recursion):
         self.add_to_tree()
-        #import json
-        #print(json.dumps(ft.tree, indent=5))
+        # import json
+        # print(json.dumps(ft.tree, indent=5))
         val = self.tree
         for s in prefix:
             if s not in self.tree:
@@ -64,7 +64,7 @@ class FindTree():
                 if count < 0:
                     break
                 val = self.sorted_words[count]
-            res.pop(0) #remove this duplicate
+            res.pop(0)  # remove this duplicate
             val = mid
             count = half
             while val.startswith(prefix):
@@ -76,19 +76,20 @@ class FindTree():
             return res
 
         elif mid < prefix:
-            new_start=half
-            new_end=end
+            new_start = half
+            new_end = end
         else:
-            new_start=start
-            new_end=half
+            new_start = start
+            new_end = half
         if new_start == start and new_end == end:
             return []
         return self.binary_find(prefix, start=new_start, end=new_end)
 
+
 if __name__ == '__main__':
     words = ['kjasdhf', 'ADSadgds', 'fdasf', 'dsggg',
              'dfgsdfg', 'dfdfdf', 'kldasda', 'klsdfsd']
-    print words
+    print(words)
 
     ft = FindTree(words)
     for prefix in ('d', 'df', 'dfa'):

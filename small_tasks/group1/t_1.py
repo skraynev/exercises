@@ -9,4 +9,4 @@ t = range(1000)
 
 odd_list = [v for v in t if v % 2 != 0]
 
-reversed_list = t[::-1] # honestly it's a range :)
+reversed_list = t[::-1]  # honestly it's a new reversed range :)

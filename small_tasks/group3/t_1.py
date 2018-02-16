@@ -21,6 +21,7 @@ def _check_input_vals(vals):
     # some other optional check for vals .... (which you may imagine :) )
     pass
 
+
 def _check_devision_on_zero(vals, ops):
     # skip combination where last operation is division on zero
     for i, op in enumerate(ops):
@@ -87,9 +88,10 @@ def fast_way(vals):
             continue
 
         if res == 100:
-            #print(res, ops)
+            # print(res, ops)
             counter += 1
     return counter
+
 
 ts = time()
 print('Fast res: ', fast_way(vals), 'Time: ', time() - ts)

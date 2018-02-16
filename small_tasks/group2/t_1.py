@@ -1,9 +1,10 @@
 '''
 TODO add description
 '''
+from itertools import chain, repeat
+
 
 def first_task():
-    from itertools import chain, repeat
 
     def var1(keys, values):
         res = {}
@@ -28,8 +29,7 @@ def first_task():
         ([1], [])
     )
 
-    for k,v in test_set:
-        print('KEYS: %s - VALS: %s'% (k, v))
+    for k, v in test_set:
+        print('KEYS: %s - VALS: %s' % (k, v))
         print(var1(k, v))
         print(var2(k, v))
-
